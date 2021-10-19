@@ -1,6 +1,8 @@
 <script>
 	import Header from '$lib/header/Header.svelte';
 	import '../app.css';
+
+	window['ga-disable-G-7ZJC580685'] = window.localStorage.getItem('disableAnalytics');
 </script>
 
 <div class="flex flex-col min-h-screen">
