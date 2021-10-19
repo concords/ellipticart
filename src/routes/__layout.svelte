@@ -2,10 +2,6 @@
 	import Header from '$lib/header/Header.svelte';
 	import { browser } from '$app/env';
 	import '../app.css';
-
-	if (browser) {
-		window['ga-disable-G-7ZJC580685'] = JSON.parse(window.localStorage.getItem('disableAnalytics'));
-	}
 </script>
 
 <div class="flex flex-col min-h-screen">
