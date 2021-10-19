@@ -6,12 +6,12 @@
 
 <header>
 	<div class="corner">
-		<a href="https://www.teamconcords.com">
-			<img src={concords} alt="Team Concords Limited" />
+		<a href="/">
+			<img src={concords} alt="ellipticart - Home" />
 		</a>
 	</div>
 
-	<h1 class="text-sm tracking-widest my-4">ellipticart.</h1>
+	<h1 class="text-sm tracking-widest my-4 font-black">ellipticart.</h1>
 
 	<div class="corner">
 		<a href="https://www.github.com/concords/ellipticart">

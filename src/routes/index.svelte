@@ -24,12 +24,12 @@
 </script>
 
 <svelte:head>
-	<title>ellipticart.</title>
+	<title>ellipticart - Home</title>
 </svelte:head>
 
-<section class="max-w-3xl flex flex-col items-center mx-auto">
+<section class="px-8 max-w-3xl flex flex-col items-center mx-auto">
     <input
-        class="w-full my-4 md:w-96 p-2 bg-gray-50 border rounded shadow"
+        class="w-full my-8 sm:w-96 p-2 bg-gray-50 border rounded shadow"
         bind:value={inputValue}
         on:input={handleInput}
         placeholder="Enter value..."
@@ -49,13 +49,17 @@
         {/if}
     </ImportKey>
     {#if key}
-    <div class="my-2 flex flex-col items-center">
-        <a href={`/g/${encodeURIComponent(key)}`}>Sharing URL</a>
+    <div class="my-2 flex w-full sm:w-96 items-center">
         <input
-            class="w-96 p-2 bg-gray-50 border rounded shadow"
+            class="flex-1 p-2 bg-gray-50 border rounded shadow"
             disabled
             value={`https://www.ellipticart.com/g/${encodeURIComponent(key)}`}
         />
+        <a href={`/g/${encodeURIComponent(key)}`}>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mx-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+        </a>
     </div>
     {/if}
 </section>

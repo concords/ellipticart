@@ -19,11 +19,11 @@
 </script>
 
 <svelte:head>
-	<title>ellipticart.</title>
+	<title>ellipticart - Share</title>
 </svelte:head>
 
-<section class="max-w-3xl flex flex-col items-center mx-auto">
-  <div class="w-96 mx-auto mt-16 bg-gray-800 p-4 rounded-xl shadow-xl text-center">
+<section class="max-w-3xl px-8 flex flex-col items-center mx-auto">
+  <div class="w-full sm:w-96 mx-auto mt-16 bg-gray-800 p-4 rounded-xl shadow-xl text-center">
     <Canvas grid={grid} colors={colors} curve={curve} />
   </div>
 </section>

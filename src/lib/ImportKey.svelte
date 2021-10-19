@@ -1,13 +1,16 @@
 <script>
   import { createEventDispatcher } from 'svelte';
   import { importPrivateKeyFromPem } from './ecdsa';
-  import logo from '$lib/header/concord-logo.svg';
 
 	const dispatch = createEventDispatcher();
 
   async function onLoadFileHandler(e) {
-    const key = await importPrivateKeyFromPem(e.target.result)
-    dispatch('import', { key });
+    try {
+      const key = await importPrivateKeyFromPem(e.target.result)
+      dispatch('import', { key });
+    } catch (e) {
+      alert('Invalid Key. \n Go grab yours from www.concords.app/identity');
+    }
   }
 
   function importKey(event) {
@@ -23,7 +26,7 @@
   }
 </script>
 
-<div class="w-96 mx-auto bg-gray-800 p-4 rounded-xl shadow-xl text-center">
+<div class="w-full sm:w-96 mx-auto bg-gray-800 p-4 rounded-xl shadow-xl text-center">
   <label class="relative group text-gray-900 hover:text-gray-700 block hover:opacity-80 transition-all transition-opacity duration-500 cursor-pointer">
     <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 bg-gray-900 text-gray-50 transition-opacity duration-200 px-5 py-2 rounded shadow-xl">Upload Key</div>
     <slot/>
