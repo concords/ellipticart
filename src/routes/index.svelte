@@ -1,8 +1,5 @@
 <script context="module">
-    export async function load(ctx) {
-      let key = ctx.page.params.key
-      return { props: { key }}
-    }
+	export const prerender = true;
 </script>
   
 
@@ -36,8 +33,8 @@
     </ImportKey>
     {#if key}
     <div class="my-2 flex flex-col items-center">
-        <a href={encodeURIComponent(key)}>Sharing URL</a>
-        <input class="w-96 p-2 bg-gray-50 border rounded shadow" disabled value={`https://www.ellipticart.com/${encodeURIComponent(key)}`} />
+        <a href={`/g/${encodeURIComponent(key)}`}>Sharing URL</a>
+        <input class="w-96 p-2 bg-gray-50 border rounded shadow" disabled value={`https://www.ellipticart.com/g/${encodeURIComponent(key)}`} />
     </div>
     {/if}
 </section>
