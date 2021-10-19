@@ -14,9 +14,9 @@
 	<h1 class="text-sm tracking-widest my-4 font-black">ellipticart.</h1>
 
 	<div class="corner">
-		<a href="https://www.github.com/concords/ellipticart">
+		<!-- <a href="https://www.github.com/concords/ellipticart">
 			<img src={github} alt="Github - concords/ellipticart" />
-		</a>
+		</a> -->
 	</div>
 </header>
 
