@@ -1,6 +1,10 @@
 <script context="module">
-	export const prerender = true;
+    export async function load(ctx) {
+      let key = ctx.page.params.key
+      return { props: { key }}
+    }
 </script>
+  
 
 <script>
 	import Canvas from '$lib/Canvas.svelte';
