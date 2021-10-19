@@ -27,6 +27,6 @@
 				</g>
 			</svg>
 		</a>
-		<a href="/privacy-policy" class="text-xs mt-2">Privacy Policy</a>
+		<a href="/privacy-policy" class="text-xs mt-4">Privacy Policy</a>
 	</footer>
 </div>

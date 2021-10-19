@@ -32,7 +32,7 @@
         class="w-full my-8 sm:w-96 p-2 bg-gray-50 border rounded shadow"
         bind:value={inputValue}
         on:input={handleInput}
-        placeholder="Enter value..."
+        placeholder="type something to generate..."
     />
     
     <ImportKey on:import={loadKey}> 
