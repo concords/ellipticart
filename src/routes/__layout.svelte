@@ -1,8 +1,11 @@
 <script>
 	import Header from '$lib/header/Header.svelte';
+	import { browser } from '$app/env';
 	import '../app.css';
 
-	window['ga-disable-G-7ZJC580685'] = window.localStorage.getItem('disableAnalytics');
+	if (browser) {
+		window['ga-disable-G-7ZJC580685'] = JSON.parse(window.localStorage.getItem('disableAnalytics'));
+	}
 </script>
 
 <div class="flex flex-col min-h-screen">
@@ -14,7 +17,7 @@
 		<slot />
 	</main>
 
-	<footer class="w-full text-center py-4">
+	<footer class="w-full text-center py-4 flex flex-col">
 		<a href="https://www.teamconcords.com">
 			<svg class="fill-current w-6 h-6 text-gray-400 inline" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" enable-background="new 0 0 96 96" xml:space="preserve">
 				<rect id="backgroundrect" width="100%" height="100%" x="0" y="0" fill="none" stroke="none"/>
@@ -24,5 +27,6 @@
 				</g>
 			</svg>
 		</a>
+		<a href="/privacy-policy" class="text-xs mt-2">Privacy Policy</a>
 	</footer>
 </div>
