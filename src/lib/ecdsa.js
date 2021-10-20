@@ -66,7 +66,7 @@ export function formatPublicKeyPem(b64) {
 
 export async function publicJwkToPem(key) {
   const exported = await window.crypto.subtle.exportKey("spki", key);
-  return window.btoa(String.fromCharCode.apply(null, new Uint8Array(exported)));
+  return b64encode(exported);
 }
 
 export async function exportPublicKey(privateKey) {
