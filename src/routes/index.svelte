@@ -4,15 +4,19 @@
   
 
 <script>
+    import { onMount } from 'svelte';
 	import Canvas from '$lib/Canvas.svelte';
 	import ImportKey from '$lib/ImportKey.svelte';
     import generator from '$lib/generator';
     import { exportPublicKey } from '$lib/ecdsa';
+	
+	onMount(() => inputEl.focus())
 
     let curve = [];
     let colors = [];
     let grid = [];
     let key = null;
+    let inputEl;
     let inputValue = '';
 
     async function loadKey(e) {
@@ -30,6 +34,7 @@
 <section class="px-8 max-w-3xl flex flex-col items-center mx-auto">
     <input
         class="w-full my-8 sm:w-96 p-2 bg-gray-50 border rounded shadow"
+        bind:this={inputEl}
         bind:value={inputValue}
         on:input={handleInput}
         placeholder="type something to generate..."
