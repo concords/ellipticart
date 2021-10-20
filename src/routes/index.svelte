@@ -5,12 +5,17 @@
 
 <script>
     import { onMount } from 'svelte';
+    import { browser } from '$app/env';
 	import Canvas from '$lib/Canvas.svelte';
 	import ImportKey from '$lib/ImportKey.svelte';
     import generator from '$lib/generator';
     import { exportPublicKey } from '$lib/ecdsa';
 	
-	onMount(() => inputEl.focus())
+	onMount(() =>  {
+        if(browser) {
+            inputEl.focus()
+        }
+    });
 
     let curve = [];
     let colors = [];
