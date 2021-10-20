@@ -26,5 +26,5 @@
   <div class="w-full sm:w-96 mx-auto mt-16 bg-gray-800 p-4 rounded-xl shadow-xl text-center">
     <Canvas grid={grid} colors={colors} curve={curve} />
   </div>
-  <a href="/">Create your own</a>
+  <a  class="my-2" href="/">Create your own</a>
 </section>

@@ -4,12 +4,12 @@
   export let curve;
 
   function getColor(point) {
-    const i = Math.floor((point * (colors.length - 1)) / 255)
-      return colors[i].join()
+    const i = Math.floor((point * colors.length) / 256)
+    return colors[i].join()
   }
   function getCurve(point) {
-    const i = Math.floor((point * (colors.length - 1)) / 255)
-    return Math.floor((curve[i] / 255) * 16)
+    const i = Math.floor((point * colors.length) / 256)
+    return Math.floor((curve[i] / 255) * 17);
   }
 </script>
 
